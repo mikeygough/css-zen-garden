@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Zen+Old+Mincho&display=swap');
+
+:root {
+  /* colors */
+  --color-brown: oklch(40% 0.1 68);
+  --color-green: oklch(40% 0.1 145);
+  --color-light-green: oklch(60% 0.1 145);
+  --color-blue: oklch(40% 0.1 240);
+  --color-white: #fff;
+  --image-border-radius: 2rem;
+  --button-border-radius: 1rem;
+}
+
+* {
+  /* remove margins */
+  margin: 0;
+}
+
+body {
+  /* set font */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fffbeb;
+  color: var(--color-brown);
+}
+
+h1 {
+  font-family: 'Arimo';
+  font-size: 3.5rem;
+  font-weight: 400;
+  height: 10rem;
+  color: var(--color-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background svg */
+  background-image: url(./topography.svg);
+  text-shadow: 3px 3px 0 #afaca2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  border-bottom: 2px solid var(--color-light-green);
+  width: max-content;
+}
+
+/* re-establish margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+blockquote,
+ul,
+ol,
+p {
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+/* create space on the page */
+div {
+  margin-bottom: 10rem;
+}
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+/* additional space on the page */
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  min-height: 50vh;
+}
+
+.requirements {
+  margin-bottom: 3rem;
+}
+
+/* set link color, remove built-in decoration */
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 450px;
+  height: 300px;
+  /* add image with psuedo class */
+  background: url('Arashiyama-Garden-1.png') no-repeat center center;
+  background-size: contain;
+  /* round corners for zen aesthetic */
+  border-radius: var(--image-border-radius);
+}
+
+.summary :nth-child(2) {
+  margin-top: 2rem;
+}
+
+/* style 'html file' and 'css file' links to look like buttons */
+.summary p a {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-radius: var(--button-border-radius);
+  text-decoration: none;
+  width: 50px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* set hover state */
+.summary p a:hover {
+  background-color: var(--color-brown);
+}
+
+/* only add image with psuedo-class of first paragraph */
+.preamble p:first-of-type::before {
+  content: '';
+  float: right;
+  width: 450px;
+  height: 300px;
+  margin-left: 1rem;
+  /* add image with psuedo class */
+  background: url('Kumano-Kodo-Trail-Trees.png') no-repeat center
+    center;
+  background-size: contain;
+  /* round corners for zen aesthetic */
+  border-radius: var(--image-border-radius);
+}
+
+.explanation p:first-of-type::before {
+  content: '';
+  float: left;
+  width: 450px;
+  height: 300px;
+  margin-right: 1rem;
+  /* add image with psuedo class */
+  background: url('Arashiyama-Garden-2.png') no-repeat center center;
+  background-size: contain;
+  /* round corners for zen aesthetic */
+  border-radius: var(--image-border-radius);
+}
+
+/* right align for 'Z' reading */
+.explanation p {
+  text-align: right;
+}
+
+.explanation p:not(:first-of-type) {
+  clear: none;
+}
+
+.participation p:first-of-type::before {
+  content: '';
+  float: right;
+  width: 450px;
+  height: 300px;
+  margin-left: 1rem;
+  /* add image with psuedo class */
+  background: url('Kumano-Kodo-Hongu-Taisha-2.png') no-repeat center
+    center;
+  background-size: contain;
+  /* round corners for zen aesthetic */
+  border-radius: var(--image-border-radius);
+}
+
+.benefits p:first-of-type::before {
+  content: '';
+  float: left;
+  width: 450px;
+  height: 300px;
+  margin-right: 1rem;
+  /* add image with psuedo class */
+  background: url('Kumano-Kodo-Naichi-Taisha-6.png') no-repeat center
+    center;
+  background-size: contain;
+  /* round corners for zen aesthetic */
+  border-radius: var(--image-border-radius);
+}
+
+.benefits p {
+  text-align: right;
+}
+
+.requirements p:first-of-type::before {
+  content: '';
+  float: right;
+  width: 450px;
+  height: 300px;
+  margin-left: 1rem;
+  /* add image with psuedo class */
+  background: url('Kumano-Kodo-Trail-Maple.png') no-repeat center
+    center;
+  background-size: contain;
+  /* round corners for zen aesthetic */
+  border-radius: var(--image-border-radius);
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* style footer links as buttons */
+footer a {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-radius: var(--button-border-radius);
+  text-decoration: none;
+  width: 50px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* set hover state */
+footer a:hover {
+  background-color: var(--color-brown);
+}
+
+/* create grid for extra content */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+/* set borders for that extra content */
+.wrapper div:nth-child(1),
+.wrapper div:nth-child(2) {
+  border-right: 1px solid var(--color-brown);
+}
+
+.wrapper h3 {
+  text-align: center;
+  font-weight: 200;
+}
+
+/* make grid responsive */
+/* remove borders on smaller screens */
+@media (max-width: 600px) {
+  .wrapper {
+    display: block;
+  }
+  .wrapper div:nth-child(1),
+  .wrapper div:nth-child(2) {
+    border-right: 0px;
+  }
+}
+
+/* remove abbr text squigglies */
+abbr {
+  text-decoration: none;
+}
+
+/* emphasize design name */
+.design-name {
+  font-size: 1.5rem;
+  color: var(--color-green);
+}
